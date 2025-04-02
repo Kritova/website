@@ -1,15 +1,20 @@
-// src/App.jsx
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
-import MainPage from './pages/mainpage';
-
+import Home from './pages/Home';
+import AboutSection from './pages/AboutUs';
+import LeadGen from './pages/LeadGen';
+import VoiceX from './pages/VoiceX';
+import ContentCraft from './pages/ContentCraft';
+import Projects from './pages/projects'
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/main" element={<MainPage />} />
+        <Route path="/about" element={<AboutSection />} />
+        <Route path="/projects/leadgen" element={<LeadGen />} />
+        <Route path="/projects/voicex" element={<VoiceX />} />
+        <Route path="/projects/contentcraft" element={<ContentCraft />} />
+        <Route path="/projects" element={<Projects/>}/>
       </Routes>
     </Router>
   );
