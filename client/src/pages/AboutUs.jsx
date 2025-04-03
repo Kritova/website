@@ -14,7 +14,7 @@ const AboutUs = () => {
   const extraMembers = [
     { name: 'Dr. Naomi Okamoto', role: 'Research Scientist' }
   ];
-
+  
   return (
     <div className="about-page">
       {/* Hero */}
