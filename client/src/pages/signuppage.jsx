@@ -2,90 +2,104 @@ import React, { useState } from 'react';
 import './signuppage.css';
 import { useNavigate } from 'react-router-dom';
 
-
 const SignupPage = () => {
-const [formData, setFormData] = useState({
-username: '',
-email: '',
-password: '',
-confirmPassword: '',
-});
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
 
-const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
-const handleChange = (e) => {
-setFormData({ ...formData, [e.target.name]: e.target.value });
-};
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.username.trim()) newErrors.username = 'Username is required';
+    if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email';
+    if (formData.password.length < 6) newErrors.password = 'Password must be at least 6 characters';
+    if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = 'Passwords do not match';
+    return newErrors;
+  };
 
-const handleSubmit = (e) => {
-e.preventDefault();
-if (formData.password !== formData.confirmPassword) {
-alert("Passwords do not match.");
-return;
-}
-console.log('Signup Data:', formData);
-// Here you can add API call to register the user
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: '' }); // Clear error on input
+  };
 
-// Navigate to login page after successful signup
-navigate('/');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
 
-};
+    console.log('Signup Data:', formData);
+    alert('Registration successful!');
+    navigate('/');
+  };
 
+  return (
+    <div className="signup-container fade-in">
+      <div className="signup-box">
+        <h2 className="signup-title">Create Your Account</h2>
+        <form className="signup-form" onSubmit={handleSubmit} noValidate>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+          {errors.username && <small className="error">{errors.username}</small>}
 
-return (<>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          {errors.email && <small className="error">{errors.email}</small>}
 
-<div className="signup-container">
-    <div className="signup-box">
-      <h2 className="signup-title">Sign Up</h2>
-      <form className="signup-form" onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="password">Password</label>
+          <div className="password-field">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+              title={showPassword ? 'Hide password' : 'Show password'}
+            >
+              {showPassword ? '🙈' : '👁️'}
+            </span>
+          </div>
+          {errors.password && <small className="error">{errors.password}</small>}
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-       <label htmlFor="confirmPassword">Re-enter Password</label>
-        <input
+          <label htmlFor="confirmPassword">Re-enter Password</label>
+          <input
             type="password"
-            id="confirmPassword"
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
             required
-         />
+          />
+          {errors.confirmPassword && <small className="error">{errors.confirmPassword}</small>}
 
-        <button type="submit" className="signup-button" onClick={handleSubmit}>Register</button>
-      </form>
+          <button type="submit" className="signup-button">Register</button>
+        </form>
+      </div>
     </div>
-  </div>
-</>
-
-     
-);
+  );
 };
 
 export default SignupPage;
-

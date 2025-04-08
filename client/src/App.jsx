@@ -6,6 +6,7 @@ import VoiceX from './pages/VoiceX';
 import ContentCraft from './pages/ContentCraft';
 import Projects from './pages/projects'
 import SignupPage from './pages/signuppage';
+import LoginPage from './pages/loginuppage';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/projects/contentcraft" element={<ContentCraft />} />
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/signuppage" element={<SignupPage/>}/>
+        <Route path="/loginuppage" element={<LoginPage/>}/>
       </Routes>
     </Router>
   );
