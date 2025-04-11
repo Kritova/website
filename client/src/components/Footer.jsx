@@ -2,16 +2,20 @@ import React from 'react';
 import logo from '../assets/kritova_logo.png';
 
 const Footer = () => {
+  const preventDefault = (e) => e.preventDefault();
+
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-col">
-          <a href="#" className="logo" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>
+          <a href="/" className="logo" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>
             <img
               src={logo}
               alt="Kritova Logo Footer"
-              style={{ width:'100px',height:'100px' }}
-              onError={(e) => (e.target.parentElement.innerHTML = "<span class='logo-text'>Krit<span>ova</span></span>")}
+              style={{ width: '100px', height: '100px' }}
+              onError={(e) =>
+                (e.target.parentElement.innerHTML = "<span class='logo-text'>Krit<span>ova</span></span>")
+              }
             />
           </a>
           <p>
@@ -19,9 +23,15 @@ const Footer = () => {
             solutions.
           </p>
           <div className="social-links">
-            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#" aria-label="GitHub"><i className="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/company/106780305/admin/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BJ%2Fhr4tBXQdyZEy7JyCXgvg%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i className="fab fa-github"></i>
+            </a>
           </div>
         </div>
 
@@ -40,12 +50,12 @@ const Footer = () => {
         <div className="footer-col">
           <h3>Resources</h3>
           <ul className="footer-links">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a href="/" onClick={preventDefault}>Blog</a></li>
+            <li><a href="/" onClick={preventDefault}>Case Studies</a></li>
+            <li><a href="/" onClick={preventDefault}>FAQ</a></li>
+            <li><a href="/" onClick={preventDefault}>Careers</a></li>
+            <li><a href="/" onClick={preventDefault}>Privacy Policy</a></li>
+            <li><a href="/" onClick={preventDefault}>Terms of Service</a></li>
           </ul>
         </div>
 
@@ -58,7 +68,8 @@ const Footer = () => {
 
       <div className="footer-bottom">
         &copy; 2025 Kritova. All rights reserved. 
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <a href="/" onClick={preventDefault}> Privacy Policy</a> | 
+        <a href="/" onClick={preventDefault}> Terms of Service</a>
       </div>
     </footer>
   );
