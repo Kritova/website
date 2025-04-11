@@ -5,10 +5,10 @@ const AboutUs = () => {
   const [showMoreTeam, setShowMoreTeam] = useState(false);
 
   const teamMembers = [
-    { name: 'Dr. Sarah Chen', role: 'Senior AI Researcher' },
-    { name: 'Amir Khan', role: 'Engineering Lead' },
-    { name: 'Elena Rodriguez', role: 'Head of Product' },
-    { name: 'Jamal Williams', role: 'ML Infrastructure' }
+    { name: 'Mithun Dama', role: 'Senior AI Researcher' },
+    { name: 'Chandrika', role: 'Engineering Lead' },
+    { name: 'Shiva Sourav', role: 'Head of Product' },
+    { name: 'Manideep reddy', role: 'ML Infrastructure' }
   ];
 
   const extraMembers = [
