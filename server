@@ -1,0 +1,6 @@
+server/
+├── index.js         // Main entry point of your Node server
+├── routes/          // (Optional for now) Folder for route logic (e.g. contact form, auth, etc.)
+├── controllers/     // (Optional for now) For logic if needed later
+├── package.json     // To track dependencies
+└── .env             // To store environment variables like DB password
