@@ -72,7 +72,7 @@ const ProjectsSection = () => {
         </div>
       </div>
       <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-        <a href="#" className="primary-btn">
+        <a href="/" onClick={(e) => e.preventDefault()} className="primary-btn">Start Your Journey</a>
           View All Projects <i className="fas fa-arrow-right"></i>
         </a>
       </div>
