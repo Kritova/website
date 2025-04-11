@@ -7,6 +7,7 @@ const ProjectsSection = () => {
         <h2>Featured Projects</h2>
         <p>Join our active development sprints and contribute to impactful AI solutions.</p>
       </div>
+
       <div className="projects">
         <div className="project-card">
           <div className="project-img">
@@ -25,7 +26,9 @@ const ProjectsSection = () => {
               Build an AI chatbot that qualifies leads 24/7 using NLP and adaptive learning. Launching
               April 2025!
             </p>
-            <a href="/projects" target="_blank" rel="noopener noreferrer" className="secondary-btn">Details <i className="fas fa-info-circle"></i></a>
+            <a href="/projects" target="_blank" rel="noopener noreferrer" className="secondary-btn">
+              Details <i className="fas fa-info-circle"></i>
+            </a>
           </div>
         </div>
 
@@ -46,7 +49,9 @@ const ProjectsSection = () => {
               Develop an affordable voice command system tailored for small business operations and
               customer interactions.
             </p>
-            <a href="/projects"   target="_blank" rel="noopener noreferrer" className="secondary-btn">Details <i className="fas fa-info-circle"></i></a>
+            <a href="/projects" target="_blank" rel="noopener noreferrer" className="secondary-btn">
+              Details <i className="fas fa-info-circle"></i>
+            </a>
           </div>
         </div>
 
@@ -67,13 +72,20 @@ const ProjectsSection = () => {
               Create a multi-modal content tool producing text, images, and layouts from brief inputs
               using generative AI.
             </p>
-            <a href="/projects" target="_blank" rel="noopener noreferrer" className="secondary-btn">Details <i className="fas fa-info-circle"></i></a>
+            <a href="/projects" target="_blank" rel="noopener noreferrer" className="secondary-btn">
+              Details <i className="fas fa-info-circle"></i>
+            </a>
           </div>
         </div>
       </div>
+
+      {/* 🔧 This block had the syntax issue — now fixed */}
       <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-        <a href="/" onClick={(e) => e.preventDefault()} className="primary-btn">Start Your Journey</a>
-          View All Projects <i className="fas fa-arrow-right"></i>
+        <a href="/projects" className="primary-btn">
+          Start Your Journey &nbsp;
+          <span style={{ fontWeight: 'bold' }}>
+            View All Projects <i className="fas fa-arrow-right"></i>
+          </span>
         </a>
       </div>
     </section>
@@ -81,3 +93,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
