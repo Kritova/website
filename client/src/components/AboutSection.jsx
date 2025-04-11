@@ -28,8 +28,7 @@ const AboutSection = () => {
             launching April 19, 2025.
           </p>
           <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
+            href="/about"
             className="secondary-btn"
             style={{ marginTop: '1rem' }}
           >
