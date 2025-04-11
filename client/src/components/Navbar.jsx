@@ -21,7 +21,7 @@ const Navbar = () => {
         <li><a href="#vision">Vision</a></li>
         <li><a href="#investors-section">Investors</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#" className="cta-btn">Join Us</a></li>
+        <li><a href="/" onClick={(e) => e.preventDefault()} className="cta-btn">Join Us</a></li>
       </ul>
       <button className="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
         <i className="fas fa-bars"></i>
