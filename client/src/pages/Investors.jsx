@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Investors from './pages/Investors';
+import React from 'react';
+
 
 function App() {
   return (
