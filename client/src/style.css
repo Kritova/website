@@ -948,8 +948,8 @@ html {
 
 /* --- Footer --- */
 footer {
-	background: var(--primary);
-	color: rgb(57, 103, 7); 
+	background: var(--tech-green);
+	color: rgb(80, 126, 32); 
 	padding: 5rem 5% 2rem; 
 	position: relative;
 }
