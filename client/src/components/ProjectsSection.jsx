@@ -50,12 +50,18 @@ const ProjectsSection = () => {
           </div>
         </div>
 
+
+
         {/* ... other cards stay same ... */}
       </div>
 
+
       <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-        <a href="#" className="primary-btn">
-          View All Projects <i className="fas fa-arrow-right"></i>
+        <a href="/projects" className="primary-btn">
+          Start Your Journey &nbsp;
+          <span style={{ fontWeight: 'bold' }}>
+            View All Projects <i className="fas fa-arrow-right"></i>
+          </span>
         </a>
       </div>
     </section>
@@ -63,3 +69,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+

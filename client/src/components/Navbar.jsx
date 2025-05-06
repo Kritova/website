@@ -32,6 +32,7 @@ const Navbar = () => {
           onError={(e) => (e.target.parentElement.innerHTML = "<span class='logo-text'>Krit<span>ova</span></span>")}
         />
       </a>
+
       <div className="nav-wrapper">
         <ul className={`nav-links ${isOpen && isSmallScreen ? 'open' : ''}`}>
           <li><a href="#" className="cta-btn">Join Us</a></li>
