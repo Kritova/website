@@ -3,10 +3,10 @@ import heroImage from '../assets/aiandcolloboration.png';
 
 const HeroSection = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="home" aria-label="Hero section">
       <div className="hero-content">
         <h1>
-          Artificial <span>New Beginnings</span> Start Here.
+          Artificial <span className="text-highlight">New Beginnings</span> Start Here.
         </h1>
         <p>
           Kritova empowers your AI journey through mentorship-driven collaboration,
@@ -22,10 +22,12 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
+
       <div className="hero-image">
         <img
           src={heroImage}
-          alt="Abstract visual representing AI collaboration and growth"
+          alt="Illustration showing humans and AI collaborating"
+          loading="lazy"
           onError={(e) => (e.target.style.display = 'none')}
         />
       </div>
