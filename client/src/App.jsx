@@ -7,6 +7,8 @@ import ContentCraft from './pages/ContentCraft';
 import Projects from './pages/projects'
 import SignupPage from './pages/signuppage';
 import LoginPage from './pages/loginuppage';
+import CourseModule from './pages/CourseModule';
+//import CourseModulePage from './pages/CourseModulePage';
 function App() {
   return (
     <Router>
@@ -19,6 +21,8 @@ function App() {
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/signuppage" element={<SignupPage/>}/>
         <Route path="/loginuppage" element={<LoginPage/>}/>
+        <Route path="coursemodule" element={<CourseModule/>}/>
+      
       </Routes>
     </Router>
   );
