@@ -62,7 +62,9 @@ const AboutSection = () => {
             reducing reliance on external resources and proving our model rapidly—like our
             lead-generating chatbot launching April 19, 2025.
           </p>
+
           <a href="/about-us" className="secondary-btn" style={{ marginTop: '1rem' }}>
+
             Learn More About Us
           </a>
         </div>

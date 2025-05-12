@@ -2,8 +2,11 @@ import React from 'react';
 import logo from '../assets/kritova_logo.png';
 
 const Footer = () => {
+  const preventDefault = (e) => e.preventDefault();
+
   return (
     <footer>
+
      <div className="footer-container">
   <div className="footer-col">
     <img src={logo} alt="Kritova Logo Footer" className="footer-logo" />
@@ -13,16 +16,16 @@ const Footer = () => {
     </p>
     </div>
     
-  
+
         <div className="footer-col">
           <h3>Resources</h3>
           <ul className="footer-links">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a href="/" onClick={preventDefault}>Blog</a></li>
+            <li><a href="/" onClick={preventDefault}>Case Studies</a></li>
+            <li><a href="/" onClick={preventDefault}>FAQ</a></li>
+            <li><a href="/" onClick={preventDefault}>Careers</a></li>
+            <li><a href="/" onClick={preventDefault}>Privacy Policy</a></li>
+            <li><a href="/" onClick={preventDefault}>Terms of Service</a></li>
           </ul>
         </div>
 
@@ -39,7 +42,8 @@ const Footer = () => {
     </div>
       <div className="footer-bottom">
         &copy; 2025 Kritova. All rights reserved. 
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        <a href="/" onClick={preventDefault}> Privacy Policy</a> | 
+        <a href="/" onClick={preventDefault}> Terms of Service</a>
       </div>
     </footer>
   );
