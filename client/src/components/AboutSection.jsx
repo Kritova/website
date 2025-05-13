@@ -3,7 +3,7 @@ import teamImage from '../assets/team.webp';
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
-  const lastScrollY = useRef(0);
+ // const lastScrollY = useRef(0);
 
   useEffect(() => {
     const el = sectionRef.current;
