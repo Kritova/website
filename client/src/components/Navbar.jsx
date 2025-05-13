@@ -33,6 +33,7 @@ const Navbar = () => {
         />
       </a>
 
+
       <div className="nav-wrapper">
         <ul className={`nav-links ${isOpen && isSmallScreen ? 'open' : ''}`}>
           <li><a href="#" className="cta-btn">Join Us</a></li>
@@ -52,6 +53,7 @@ const Navbar = () => {
           </button>
         )}
       </div>
+
     </nav>
   );
 };

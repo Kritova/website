@@ -16,7 +16,21 @@
     max-width: 420px;
     animation: fadeInUp 0.6s ease-in-out;
   }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+
+  }
   
+  .logo-img {
+    width: 90px;  /* control the width */
+    height: auto;  /* maintain natural aspect ratio */
+    max-height: 150px; /* LIMIT the maximum height */
+  }
+  
+    
   .login-title {
     margin-bottom: 1.5rem;
     color: #2c3e50;
@@ -44,6 +58,25 @@
   .password-field {
     position: relative;
   }
+  .social-login-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .signin-text {
+    font-size: 10px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .social-icon-inline {
+    width: 15px; 
+    height: 15px;
+    cursor: pointer;
+  }
   
   .password-field .toggle-password {
     position: absolute;
@@ -53,6 +86,12 @@
     cursor: pointer;
     font-size: 1.1rem;
     color: #666;
+  }
+  .eye-icon {
+    width: 20px;
+    height: 20px;
+    color: #555; /* or customize for Kritova brand colors */
+    cursor: pointer;
   }
   
   .login-button {

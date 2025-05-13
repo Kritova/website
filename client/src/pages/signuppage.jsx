@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './signuppage.css';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/kritova_logo.png';
+
+import appleLogo from '../assets/apple.png';
+import googleLogo from '../assets/google.png';
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -44,6 +48,9 @@ const SignupPage = () => {
   return (
     <div className="signup-container fade-in">
       <div className="signup-box">
+      <a href="/" className="logo">
+        <img className="logo-img" src={logo}  alt="Kritova Logo"/>
+      </a>
         <h2 className="signup-title">Create Your Account</h2>
         <form className="signup-form" onSubmit={handleSubmit} noValidate>
           <label htmlFor="username">Username</label>
@@ -96,6 +103,14 @@ const SignupPage = () => {
           {errors.confirmPassword && <small className="error">{errors.confirmPassword}</small>}
 
           <button type="submit" className="signup-button">Register</button>
+          <div className="social-login-inline">
+            <span className="signin-text">Or login in with</span>
+            <img src={googleLogo} alt="Google logo" className="social-icon-inline" />or<img src={appleLogo} alt="Apple logo" className="social-icon-inline" />
+
+          </div>
+          <p className="login-switch">
+             Already have an account? <a href="/loginuppage">Login Up</a>
+        </p>
         </form>
       </div>
     </div>
