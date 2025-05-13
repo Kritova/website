@@ -20,12 +20,12 @@ const Footer = () => {
         <div className="footer-col">
           <h3>Resources</h3>
           <ul className="footer-links">
-            <li><a href="/" onClick={preventDefault}>Blog</a></li>
-            <li><a href="/" onClick={preventDefault}>Case Studies</a></li>
-            <li><a href="/" onClick={preventDefault}>FAQ</a></li>
-            <li><a href="/" onClick={preventDefault}>Careers</a></li>
-            <li><a href="/" onClick={preventDefault}>Privacy Policy</a></li>
-            <li><a href="/" onClick={preventDefault}>Terms of Service</a></li>
+            <li><a href="#" onClick={preventDefault}>Blog</a></li>
+            <li><a href="#" onClick={preventDefault}>Case Studies</a></li>
+            <li><a href="#" onClick={preventDefault}>FAQ</a></li>
+            <li><a href="#" onClick={preventDefault}>Careers</a></li>
+            <li><a href="#" onClick={preventDefault}>Privacy Policy</a></li>
+            <li><a href="#" onClick={preventDefault}>Terms of Service</a></li>
           </ul>
         </div>
 
@@ -36,9 +36,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="social-links">
-      <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-      <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-      <a href="#" aria-label="GitHub"><i className="fab fa-github"></i></a>
+      <a href="#" onClick={preventDefault} aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+      <a href="#" onClick={preventDefault} aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+      <a href="#" onClick={preventDefault} aria-label="GitHub"><i className="fab fa-github"></i></a>
     </div>
       <div className="footer-bottom">
         &copy; 2025 Kritova. All rights reserved. 
